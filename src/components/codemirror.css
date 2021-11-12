@@ -3,12 +3,12 @@
 .CodeMirror {
 	/* copied colors over from prism */
 	--background: var(--back-light);
-	--base: hsl(45, 7%, 45%);
-	--comment: hsl(210, 25%, 60%);
-	--keyword: hsl(204, 58%, 45%);
-	--function: hsl(19, 67%, 45%);
-	--string: hsl(41, 37%, 45%);
-	--number: hsl(102, 27%, 50%);
+	--base: #e5e7eb;
+	--comment: #a7f3d0;
+	--keyword: #60a5fa;
+	--function: #d97706;
+	--string: #fbbf24;
+	--number: #34d399;
 	--tags: var(--function);
 	--important: var(--string);
 
