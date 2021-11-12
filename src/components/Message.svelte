@@ -25,10 +25,7 @@
 	class:truncate
 >
 	{#if details}
-		<p
-			class:navigable={details.filename}
-			on:click={() => console.log('navigate(details)}>{message(details)')}
-		/>
+		<p class:navigable={details.filename} />
 	{:else}
 		<slot />
 	{/if}

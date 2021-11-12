@@ -172,9 +172,7 @@
 	{#if !CodeMirror}
 		<pre style="position: absolute; left: 0; top: 0">{code}</pre>
 
-		<div style="position: absolute; width: 100%; bottom: 0">
-			<Message kind="info">loading editor...</Message>
-		</div>
+		<div style="position: absolute; width: 100%; bottom: 0">loading editor...</div>
 	{/if}
 </div>
 
@@ -222,12 +220,12 @@
 		border: none;
 		padding: 4px 4px 4px 60px;
 		resize: none;
-		font-family: var(--font-mono);
+		font-family: monospace;
 		font-size: 13px;
 		line-height: 1.7;
 		user-select: none;
 		pointer-events: none;
-		color: #ccc;
+		color: #111827;
 		tab-size: 2;
 		-moz-tab-size: 2;
 	}

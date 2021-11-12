@@ -58,15 +58,6 @@
 
 <style>
 	textarea {
-		width: 100%;
-		height: 100vh;
-		border: none;
-		outline: none;
-		font-family: monospace;
-		font-size: 14px;
-		padding: 10px;
-		resize: none;
-		background: #1f2937;
-		color: #fff;
+		display: none;
 	}
 </style>
