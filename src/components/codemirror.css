@@ -44,7 +44,7 @@
 	padding: 0 3px 0 5px;
 	min-width: 20px;
 	text-align: right;
-	color: var(--comment);
+	color: #9ab9d7;
 	white-space: nowrap;
 	opacity: 0.6;
 }
