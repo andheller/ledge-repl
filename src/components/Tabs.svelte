@@ -23,5 +23,6 @@
 	li {
 		display: inline-block;
 		padding: 20px 10px;
+		cursor: pointer;
 	}
 </style>

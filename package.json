@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/svelte-repl": "^0.3.1"
+		"@sveltejs/svelte-repl": "^0.3.1",
+		"codemirror": "^5.63.3"
 	}
 }
