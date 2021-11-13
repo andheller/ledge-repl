@@ -1,5 +1,5 @@
 <script>
-	import Repl from '../components/ReplMirror.svelte';
+	import Repl from '../components/Repl.svelte';
 </script>
 
 <Repl />

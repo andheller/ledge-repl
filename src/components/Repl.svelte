@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
 	import { browser } from '$app/env';
-	import Input from '../components/Input.svelte';
+	import Input from './Input.svelte';
 	import Output from '../components/Output.svelte';
-	import type { Component } from '../types';
+
 	let screenWidth;
 	let inputWidth = 50;
 	let outputWidth = 50;
@@ -25,7 +25,7 @@
 		}
 	}
 
-	let components: Component[] = [
+	export let components = [
 		{
 			id: 0,
 			name: 'App',
@@ -34,12 +34,13 @@
 	let name = 'world';
 <\/script>
 
-<h1>Hello {name}!</h1>
+<h1 class="text-3xl text-orange-800 text-center bg-orange-50 p-16 m-16 shadow-xl">Hello {name} 🎉!</h1>
 	`
 		}
 	];
+
 	let compiled;
-	let current: number = 0;
+	let current = 0;
 	let worker;
 
 	if (browser) {
@@ -49,7 +50,7 @@
 			compiled = event.data;
 		});
 	}
-	function compile(_components: Component[]): void {
+	function compile(_components) {
 		if (browser) worker.postMessage(_components);
 	}
 
