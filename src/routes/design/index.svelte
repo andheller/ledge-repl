@@ -65,7 +65,9 @@
 		<div class="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-4">
 			<span class="text-xl mt-7">{color.name}</span>
 		</div>
-		<div class="min-w-0 flex-1 grid grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2">
+		<div
+			class="min-w-0 flex-1 grid grid-cols-2 sm:grid-cols-5 2xl:grid-cols-10 gap-x-4 gap-y-3 2xl:gap-x-2"
+		>
 			{#each color.color as sub}
 				<div class="space-y-1.5">
 					<div
