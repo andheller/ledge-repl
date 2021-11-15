@@ -1,14 +1,12 @@
 <script lang="ts">
 	import Tabs from './Tabs.svelte';
-	import type { Component } from '../types';
 	import CodeMirror from './CodeMirror.svelte';
-	import { validate_each_argument } from 'svelte/internal';
-	export let components: Component[] = [];
-	export let current: number = 0;
+	export let components = [];
+	export let current = 0;
 	export let errorLoc;
-	let textarea: HTMLTextAreaElement;
+	let textarea;
 	let editor;
-	function get_max(_components: Component[]): number {
+	function get_max(_components) {
 		const ids = _components.map(({ id }) => id);
 		return Math.max(...ids);
 	}

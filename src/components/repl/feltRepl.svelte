@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/env';
 	import Input from './Input.svelte';
-	import Output from '../components/Output.svelte';
+	import Output from './/Output.svelte';
 
 	let screenWidth;
 	let inputWidth = 50;
@@ -60,7 +60,7 @@
 <svelte:window bind:innerWidth={screenWidth} on:mouseup={handleMouseup} />
 <main>
 	<div class="flex" on:mousemove={handleMousemove}>
-		<div class="bg-gray-900 text-white input" style="width:{inputWidth}%">
+		<div class="bg-green-900 felt text-white input" style="width:{inputWidth}%">
 			<Input bind:components bind:current />
 		</div>
 		<div
@@ -87,5 +87,13 @@
 	}
 	.resize.active {
 		padding: 0px 250px;
+	}
+	.felt {
+		background-image: 
+    /* top, transparent red */ linear-gradient(
+				rgba(11, 62, 46, 0.8),
+				rgba(11, 62, 46, 0.95)
+			),
+			/* your image */ url('felt.png');
 	}
 </style>
