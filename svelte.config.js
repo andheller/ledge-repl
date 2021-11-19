@@ -13,9 +13,7 @@ const config = {
 
 	kit: {
 		target: '#svelte',
-		adapter: cloudflare({
-			// any esbuild options
-		})
+		adapter: cloudflare()
 	}
 };
 
