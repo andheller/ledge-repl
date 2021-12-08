@@ -6,7 +6,6 @@
 	<div>
 		{JSON.stringify($content)}
 	</div>
-	{$activeBlock}{$activeProp}{$activeIndex}
 	<input bind:value={$content[0].props.class} />
 </div>
 

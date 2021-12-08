@@ -18,13 +18,27 @@ export const content = writable([
 		blockID: '123',
 		name: 'First Component',
 		props: {
-			text: "I'm # 1",
-			class: 'bg-blue-50'
+			text: '',
+			class: 'bg-blue-50/50 text-blue-800 shadow-xl p-5 m-auto block max-w-xl backdrop-blur-md'
 		}
 	}
 ]);
 
 if (browser) {
+	if (!localStorage.getItem('content')) {
+		let block = [
+			{
+				componentID: '123-1234-12345-xa2',
+				blockID: '123',
+				name: 'First Component',
+				props: {
+					text: '',
+					class: 'bg-blue-50/50 text-blue-800 shadow-xl p-5 m-auto block max-w-xl backdrop-blur-md'
+				}
+			}
+		];
+		localStorage.setItem('content', JSON.stringify(block));
+	}
 	if (localStorage.content) {
 		content.update(() =>
 			JSON.parse(localStorage.content).map((v) => ({

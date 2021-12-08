@@ -1,5 +1,6 @@
 <script>
 	import { content, activeBlock, activeProp, activeIndex } from '../stores.js';
+	import { handleKeyUp } from '../components/editor/edits.js';
 	import Settings from '../components/editor/Settings.svelte';
 
 	function findBlockIndex(id) {
@@ -17,10 +18,11 @@
 	}
 </script>
 
-<svelte:window
-	on:mouseup={(event) => console.log(window.getSelection().anchorNode.parentNode.isContentEditable)}
-/>
+<svelte:head>
+	<script src="https://cdn-tailwindcss.vercel.app/"></script>
+</svelte:head>
 
+<svelte:window on:keyup={handleKeyUp} />
 <Settings />
 
 {#each $content as { component, blockID, props } (blockID)}

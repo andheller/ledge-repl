@@ -1,18 +1,12 @@
 <script>
 	export let props = {
 		text: 'Hello',
-		class: 'bg-blue-200'
+		class: 'bg-blue-50/50 text-blue-800 shadow-xl p-5 m-auto block max-w-xl backdrop-blur-md'
 	};
 </script>
 
-<div
-	onselect={(event) => alert('hi')}
-	contenteditable="true"
-	bind:innerHTML={props.text}
-	data-prop="text"
-	class={props.class}
->
-	{#if props.title}{props.text}{/if}
+<div contenteditable="true" bind:innerHTML={props.text} data-prop="text" class={props.class}>
+	{props.text}
 </div>
 
 <style>
@@ -27,6 +21,5 @@
 	}
 	div {
 		outline: none;
-		display: inline-block;
 	}
 </style>
