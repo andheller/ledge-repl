@@ -1,7 +1,7 @@
 <script>
 	import { content, activeBlock, activeProp, activeIndex } from '../../stores.js';
 	import { handleKeyUp } from '../../components/editor/edits.js';
-	import Settings from '../components/editor/Settings.svelte';
+	import Settings from '../../components/editor/Settings.svelte';
 
 	function findBlockIndex(id) {
 		let index = $content.findIndex((item) => item.blockID == id);
