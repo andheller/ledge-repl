@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess';
-import cloudflare from '@sveltejs/adapter-cloudflare';
+import vercel from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,7 +13,7 @@ const config = {
 
 	kit: {
 		target: '#svelte',
-		adapter: cloudflare()
+		adapter: vercel()
 	}
 };
 
