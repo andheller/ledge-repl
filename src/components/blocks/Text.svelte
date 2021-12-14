@@ -1,7 +1,7 @@
 <script>
 	export let props = {
-		text: 'Hello',
-		class: 'bg-blue-50/50 text-blue-800 shadow-xl p-5 m-auto block max-w-xl backdrop-blur-md'
+		Text: 'Hello',
+		Class: 'bg-blue-50/50 text-blue-800 shadow-xl p-5 m-auto block max-w-xl backdrop-blur-md'
 	};
 </script>
 

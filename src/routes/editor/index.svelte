@@ -34,3 +34,10 @@
 		<svelte:component this={component} bind:props />
 	</div>
 {/each}
+
+<style>
+	:global(.text):empty::before {
+		content: 'type something...';
+		color: #9ca3af;
+	}
+</style>

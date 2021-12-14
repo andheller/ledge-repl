@@ -8,15 +8,16 @@ export function handleClick(section) {
 
 export function handleKeyUp(e) {
 	if (e.key == ' ') return spaceKey();
+	if (e.altKey == true) return altKey(e.key);
 	if (e.ctrlKey == false) return;
-	//if ($activeBlock == undefined) return
-	if (e.key == 'Enter') return ctrlEnter();
+	if (e.key == 'Enter')
+		//if ($activeBlock == undefined) return
+		return ctrlEnter();
 }
 
 function spaceKey() {
 	//check for contentEditable
 	//check line for markup
-	console.log('space key');
 	//window.getSelection().anchorNode.parentNode.isContentEditable;
 }
 
@@ -24,6 +25,7 @@ function ctrlEnter() {
 	let blockID = generateUUID();
 	let newBlock = {
 		component: Text,
+		name: 'Text',
 		componentID: '123-1234-12345-xa2',
 		blockID: blockID,
 		props: {
@@ -37,6 +39,20 @@ function ctrlEnter() {
 	setTimeout(function () {
 		document.querySelector(`[data-block-id="${blockID}"] div`).focus();
 	}, 0);
+}
+
+function altKey(key) {
+	//if (getSelection().anchorNode.parentNode.isContentEditable != true) return;
+	console.log('test');
+	if (key == 'Enter') insertDiv();
+}
+function insertDiv() {
+	let selection = window.getSelection();
+	let range = selection.getRangeAt(0);
+	console.log(range);
+	let node = document.createElement('div');
+	node.classList.add('text');
+	range.insertNode(node);
 }
 
 function generateUUID() {
